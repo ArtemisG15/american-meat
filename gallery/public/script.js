@@ -695,7 +695,7 @@ function renderGallery(items) {
           .join('');
 
         // Use first image from images array or single image
-        const imagesArray = Array.isArray(item.images) && item.images.length > 0 ? item.images : [item.image || '../Images/placeholder.jpg'];
+        const imagesArray = Array.isArray(item.images) && item.images.length > 0 ? item.images : [item.image || '../images/placeholder.jpg'];
         const displayImage = imagesArray[0];
         const imageData = JSON.stringify(imagesArray);
 
@@ -759,7 +759,7 @@ function renderGallery(items) {
         const newIndex = parseInt(dot.dataset.index);
 
         // Update the displayed image
-        image.src = imagesArray[newIndex] || '../Images/placeholder.jpg';
+        image.src = imagesArray[newIndex] || '../images/placeholder.jpg';
         image.dataset.currentImage = newIndex;
 
         // Update active dot
@@ -793,7 +793,7 @@ function openImageModal(images, initialIndex, galleryItem) {
   let currentIndex = initialIndex;
 
   // Set initial image
-  modalImage.src = images[currentIndex] || '../Images/placeholder.jpg';
+  modalImage.src = images[currentIndex] || '../images/placeholder.jpg';
   modalImage.alt = 'Enlarged product image';
   modal.style.display = 'block';
 
@@ -926,7 +926,7 @@ function updateModalImage(images, index) {
   const imageDots = document.getElementById('image-dots');
   if (!modalImage || !imageDots) return;
 
-  modalImage.src = images[index] || '../Images/placeholder.jpg';
+  modalImage.src = images[index] || '../images/placeholder.jpg';
   modalImage.classList.remove('zoomed');
   modalImage.style.transform = 'scale(1)';
 
