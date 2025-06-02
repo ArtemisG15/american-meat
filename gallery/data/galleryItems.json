@@ -11,7 +11,7 @@
       "bovineSpot": "none",
       "analRing": "NeonPink"
     },
-    "image": "../images/IMG_5351.jpg",
+    "image": "../Images/IMG_5351.jpg",
     "createdAt": "2025-05-01T10:00:00Z"
   },
   {
@@ -26,7 +26,7 @@
       "bovineSpot": "White",
       "analRing": "Black"
     },
-    "image": "../images/IMG_5353.jpg",
+    "image": "../Images/IMG_5353.jpg",
     "createdAt": "2025-04-30T12:00:00Z"
   },
   {
@@ -41,7 +41,7 @@
       "analRing": "Black",
       "fur": "none"
     },
-    "image": "../images/IMG_5357.jpg",
+    "image": "../Images/IMG_5357.jpg",
     "createdAt": "2025-05-02T14:00:00Z"
   },
   {
@@ -57,8 +57,8 @@
       "fur": "Black"
     },
     "images": [
-      "../images/IMG_5358.jpg",
-      "../images/IMG_5358-alt1.jpg"
+      "../Images/IMG_5358.jpg",
+      "../Images/IMG_5358-alt1.jpg"
     ],
     "createdAt": "2025-04-29T16:00:00Z"
   },
@@ -71,7 +71,7 @@
       "vulvaAnalHighlight": "White",
       "fur": "NeonPink"
     },
-    "image": "../images/IMG_5359.jpg",
+    "image": "../Images/IMG_5359.jpg",
     "createdAt": "2025-05-03T09:00:00Z"
   },
   {
@@ -83,7 +83,7 @@
       "vulvaAnalHighlight": "NeonYellow",
       "fur": "Brown"
     },
-    "image": "../images/IMG_5362.jpg",
+    "image": "../Images/IMG_5362.jpg",
     "createdAt": "2025-04-28T11:00:00Z"
   },
   {
@@ -97,7 +97,7 @@
       "vulvaAnalTeat": "White",
       "fur": "none"
     },
-    "image": "../images/IMG_5364.jpg",
+    "image": "../Images/IMG_5364.jpg",
     "createdAt": "2025-05-04T13:00:00Z"
   },
   {
@@ -109,7 +109,7 @@
       "vulvaHighlight": "CottonCandyBlue",
       "analRing": "White"
     },
-    "image": "../images/IMG_5366.jpg",
+    "image": "../Images/IMG_5366.jpg",
     "createdAt": "2025-05-05T15:00:00Z"
   },
   {
@@ -121,7 +121,7 @@
       "vulvaHighlight": "NeonPink",
       "analRing": "none"
     },
-    "image": "../images/IMG_5367.jpg",
+    "image": "../Images/IMG_5367.jpg",
     "createdAt": "2025-04-27T17:00:00Z"
   },
   {
@@ -136,7 +136,7 @@
       "bovineSpot": "Black",
       "analRing": "none"
     },
-    "image": "../images/IMG_5372.jpg",
+    "image": "../Images/IMG_5372.jpg",
     "createdAt": "2025-05-06T08:00:00Z"
   },
   {
@@ -151,7 +151,7 @@
       "bovineSpot": "none",
       "analRing": "NeonPink"
     },
-    "image": "../images/IMG_5374.jpg",
+    "image": "../Images/IMG_5374.jpg",
     "createdAt": "2025-04-26T10:00:00Z"
   },
   {
@@ -164,7 +164,7 @@
       "analRing": "Black",
       "fur": "Brown"
     },
-    "image": "../images/IMG_5376.jpg",
+    "image": "../Images/IMG_5376.jpg",
     "createdAt": "2025-05-07T12:00:00Z"
   }
 ]
