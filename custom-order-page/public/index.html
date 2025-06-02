@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Meat - Custom Order</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+    <div class="logo">American Meat</div>
+    <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav id="main-nav">
+        <ul>
+                <li><a href="../../landing-page/public/index.html">Home</a></li>
+                <li><a href="#" class="active">Custom Order</a></li>
+                <li><a href="../../ready-to-ship/public/index.html">Ready to Ship</a></li>
+                <li><a href="../../dildos/public/index.html">Dildos</a></li>
+                <li><a href="../../accessories/public/index.html">Accessories</a></li>
+                <li><a href="../../gallery/public/index.html">Gallery</a></li>
+                <li><a href="../../order-tracker/public/index.html">Order Tracker</a></li>
+                <li><a href="../../view-cart/public/index.html" id="cart-link"><i class="fas fa-shopping-cart"></i> View Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main-container">
+        <div id="product-selection" class="screen active">
+            <div class="header-container">
+                <h1>Select Your Product</h1>
+            </div>
+            <div class="product-grid">
+                <div class="product-card" data-product="terlingua">
+                    <img src="../../src/assets/images/terlingua.png" alt="Terlingua Product">
+                    <h2>Terlingua</h2>
+                </div>
+                <div class="product-card" data-product="two-hole-pony">
+                    <img src="../../src/assets/images/pony.png" alt="Two Hole Pony Product">
+                    <h2>Two Hole Pony</h2>
+                </div>
+                <div class="product-card" data-product="two-hole-cheval">
+                    <img src="../../src/assets/images/cheval.png" alt="Two Hole Cheval Product">
+                    <h2>Two Hole Cheval</h2>
+                </div>
+                <div class="product-card" data-product="two-hole-canine">
+                    <img src="../../src/assets/images/2canine.png" alt="Two Hole Canine Product">
+                    <h2>Two Hole Canine</h2>
+                </div>
+                <div class="product-card" data-product="deer">
+                    <img src="../../src/assets/images/deer.png" alt="Deer Product">
+                    <h2>Deer</h2>
+                </div>
+                <div class="product-card" data-product="dragon">
+                    <img src="../../src/assets/images/dragon.png" alt="Dragon Product">
+                    <h2>Dragon</h2>
+                </div>
+                <div class="product-card" data-product="one-hole-canine">
+                    <img src="../../src/assets/images/1canine.png" alt="One Hole Canine Product">
+                    <h2>One Hole Canine</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="customization" class="screen">
+            <button id="back-btn" aria-label="Go back to product selection">← Back to Products</button>
+            <button id="view-cart-btn" aria-label="View shopping cart">View Cart</button>
+            <div class="header-container">
+                <h2 class="customization-title">Customize Your <span id="product-name"></span></h2>
+            </div>
+            <div class="customization-container">
+                <div class="preview-column">
+                    <div class="preview">
+                        <div id="preview-images">
+                            <!-- Exterior view SVGs -->
+                            <object id="preview-body" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-marbling" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-vat" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-fur" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-tail" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-full-face" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-bovine-spot" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-vah" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-vh" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-anal-ring" class="preview-layer" type="image/svg+xml"></object>
+                            <!-- Internal view SVGs -->
+                            <object id="preview-internal-body" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-internal-marbling" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-internal-full-face" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-internal-insert-vaginal" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-internal-insert-anal" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-internals" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-internal-anal-outline" class="preview-layer" type="image/svg+xml"></object>
+                            <object id="preview-outline" class="preview-layer" type="image/svg+xml"></object>
+                            <div id="svg-error" style="display: none; color: red; text-align: center;">Uh Oh, This Seems To Be Broken.</div>
+                        </div>
+                        <div class="view-buttons">
+                            <button id="view-exterior-btn" class="view-btn active">View Exterior</button>
+                            <button id="view-internals-btn" class="view-btn">View Internals</button>
+                        </div>
+                        <div id="preview-text"></div>
+                        <button id="add-to-cart-btn" aria-label="Add current product to cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="options-column">
+                    <div class="options">
+                        <div id="required-options"></div>
+                        <div id="optional-options"></div>
+                    </div>
+                    <div id="color-modal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <h3 id="color-grid-heading">Pick Your Body Color!</h3>
+                            <div id="color-grid" class="color-grid"></div>
+                            <div id="color-grid-message" class="note" style="display: none; text-align: center;">This color cannot be selected unless there is a marble.</div>
+                            <div class="modal-btn-container">
+                            <button class="modal-btn" id="color-modal-confirm">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 American Meat. All rights reserved.</p>
+    </footer>
+    <script src="../../src/cart.js"></script>
+    <script src="./scripts.js" type="module"></script>
+</body>
+</html>

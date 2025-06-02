@@ -1,0 +1,23 @@
+[
+    {
+        "id": "dildo-001",
+        "category": "dildos",
+        "name": "Dickle Rick Pickle Scientist Dildo",
+        "price": 59.99,
+        "image": "../src/assets/images/external-view/dickle-rick-main.jpg",
+        "options": { "color": "Green", "size": "Medium" },
+        "description": "Introducing Dickle Rick, the wildest pickle scientist dildo in the multiverse! Crafted with premium, body-safe silicone, this 7-inch masterpiece features a vibrant green hue, textured ridges for extra stimulation, and a sturdy suction cup base for hands-free adventures. Perfect for fans of interdimensional fun, Dickle Rick is phthalate-free, easy to clean, and compatible with water-based lubricants. Get ready to explore new dimensions of pleasure!",
+        "additionalImages": [
+            "../src/assets/images/external-view/dickle-rick-side.jpg",
+            "../src/assets/images/external-view/dickle-rick-base.jpg",
+            "../src/assets/images/external-view/dickle-rick-texture.jpg"
+        ],
+        "details": {
+            "material": "Body-Safe Silicone",
+            "length": "7 inches",
+            "diameter": "1.5 inches",
+            "features": "Suction Cup Base, Textured Ridges",
+            "care": "Clean with mild soap and water, store in a cool, dry place"
+        }
+    }
+]

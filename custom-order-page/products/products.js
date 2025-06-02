@@ -1,0 +1,431 @@
+export const products = {
+  'terlingua': {
+    required: { 
+      bodyColor: [
+        'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ], 
+      vaginalInsert: ['medium', 'large'], 
+      cervixDepth: ['3', '5', '7'], 
+      analInsert: ['medium', 'large'] 
+    },
+    optional: { 
+      marblingColor: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ], 
+      internalClitoralHood: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple',
+        'FleshyPink', 'BubbleGumPink', 'MarshmallowPink'
+      ],
+      analRing: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ], 
+      fur: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ] 
+    },
+  },
+  'two-hole-pony': {
+    required: { 
+      bodyColor: [
+        'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ], 
+      vaginalInsert: ['tight', 'standard', 'large-ribbed'], 
+      analInsert: ['tight', 'standard', 'large-ribbed'] 
+    },
+    optional: { 
+      marblingColor: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ], 
+      internalClitoral: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple',
+        'FleshyPink', 'BubbleGumPink', 'MarshmallowPink'
+      ],
+      fullFace: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ], 
+      bovineSpot: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ],
+      analRing: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ]
+    },
+  },
+  'two-hole-cheval': {
+    required: { 
+      bodyColor: [
+        'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ], 
+      vaginalInsert: ['tight', 'standard', 'large-ribbed'], 
+      analInsert: ['tight', 'standard', 'large-ribbed'] 
+    },
+    optional: { 
+      marblingColor: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ], 
+      internalClitoral: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple',
+        'FleshyPink', 'BubbleGumPink', 'MarshmallowPink'
+      ],
+      fullFace: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ], 
+      bovineSpot: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ],
+      analRing: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'F-1.5em', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ]
+    },
+  },
+  'two-hole-canine': {
+    required: {
+      bodyColor: [
+        'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ],
+      vaginalInsert: ['medium', 'large'],
+      analInsert: ['medium', 'large']
+    },
+    optional: {
+      marblingColor: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ],
+      internalClitoral: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple',
+        'FleshyPink', 'BubbleGumPink', 'MarshmallowPink'
+      ],
+      vulvaAnalTeat: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ],
+      fur: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ]
+    },
+  },
+  'deer': {
+    required: {
+      bodyColor: [
+        'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ]
+    },
+    optional: {
+      marblingColor: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ],
+      internalClitoral: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple',
+        'FleshyPink', 'BubbleGumPink', 'MarshmallowPink'
+      ],
+      vulvaAnalHighlight: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ],
+      fur: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ]
+    },
+  },
+  'dragon': {
+    required: {
+      bodyColor: [
+        'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ]
+    },
+    optional: {
+      marblingColor: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ],
+      internalClitoral: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple',
+        'FleshyPink', 'BubbleGumPink', 'MarshmallowPink'
+      ],
+      vulvaHighlight: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ],
+      analRing: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ]
+    },
+  },
+  'one-hole-canine': {
+    required: {
+      bodyColor: [
+        'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ],
+      analInsert: ['medium', 'large']
+    },
+    optional: {
+      marblingColor: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ],
+      internals: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple',
+        'FleshyPink', 'BubbleGumPink', 'MarshmallowPink'
+      ],
+      analRing: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ],
+      fur: [
+        'none', 'Black', 'DarkGray', 'MediumGray', 'LightGray', 'White', 'CottonCandyPink', 'Pink', 'NeonPink',
+        'Red', 'CherryPie', 'DrakeRed', 'BurntOrange', 'FireOrange', 'NeonOrange', 'Salmon', 'Flesh',
+        'PineappleSmoothie', 'Orange', 'NeonTangerine', 'FlutterYellow', 'NeonYellow', 'BananaYellow',
+        'CustardYellow', 'GoldMetallic', 'Tan', 'Buckskin', 'OriginalDogBrown', 'CopperRed', 'Brown',
+        'Chocolate', 'DarkChocolate', 'MintGreen', 'CartoonDragonGreen', 'Cyan', 'LyricGreen',
+        'ClassicGreen', 'NeonGreen', 'Olive', 'DragonGreen', 'TwilightSpinachMetallic', 'FrostedMetallic',
+        'CottonCandyBlue', 'RainbowBlue', 'PupperBlue', 'NeonBlue', 'GrayBlue', 'DragonBlue', 'LunarBlue',
+        'Blurple', 'CottonCandyPurple', 'DragonPurple', 'MagicPurple', 'Lilac', 'NeonPurple', 'DarkMagicPurple', 'RedishPurple'
+      ]
+    },
+  },
+};
