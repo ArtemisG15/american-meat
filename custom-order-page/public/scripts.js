@@ -407,23 +407,33 @@ const confirmBtn = document.getElementById('color-modal-confirm');
 
     // Placeholder price calculation (replace with actual logic)
     function calculatePrice(config, product) {
-        const basePrices = {
-            'terlingua': 199.99,
-            'two-hole-pony': 179.99,
-            'two-hole-cheval': 179.99,
-            'two-hole-canine': 169.99,
-            'deer': 159.99,
-            'dragon': 189.99,
-            'one-hole-canine': 149.99
-        };
-        let price = basePrices[product] || 149.99;
-        if (config.marblingColor !== 'none') price += 20.00;
-        if (config.fur !== 'none') price += 15.00;
-        if (config.fullFace !== 'none') price += 25.00;
-        if (config.bovineSpot !== 'none') price += 20.00;
-        if (config.analRing !== 'none') price += 10.00;
-        return price;
-    }
+    const basePrice = 89.00; // Base price for all custom products
+    let price = basePrice;
+    
+    // Define optional features and their prices
+    const optionalPricing = {
+        'marblingColor': 30.00,
+        'fullFace': 30.00,
+        'bovineSpot': 30.00,
+        'fur': 25.00,
+        'vulvaAnalTeat': 25.00,
+        'vulvaAnalHighlight': 25.00,
+        'vulvaHighlight': 25.00,
+        'internalClitoralHood': 20.00,
+        'internalClitoral': 20.00,
+        'internals': 20.00,
+        'analRing': 15.00
+    };
+    
+    // Add optional feature costs
+    Object.entries(config).forEach(([feature, value]) => {
+        if (value && value !== 'none' && optionalPricing[feature]) {
+            price += optionalPricing[feature];
+        }
+    });
+    
+    return price;
+}
 
     function updateOptionAvailability() {
         if (!['two-hole-pony', 'two-hole-cheval'].includes(selectedProduct)) {
@@ -453,7 +463,8 @@ const confirmBtn = document.getElementById('color-modal-confirm');
     }
     const product = products[selectedProduct];
 
-    requiredOptions.innerHTML = '<h3>Required Options</h3>';
+    // Required options section - show base price
+    requiredOptions.innerHTML = '<h3>Required Options - Base Price: $89.00</h3>';
     Object.entries(product.required).forEach(([key, values]) => {
         const div = document.createElement('div');
         div.className = `option-group${key === activeOption ? ' selected' : ''}`;
@@ -471,8 +482,8 @@ const confirmBtn = document.getElementById('color-modal-confirm');
         // Create label container
         const label = document.createElement('label');
         label.textContent = displayLabel;
-        label.dataset.option = key; // For click handling
-        label.classList.toggle('active', key === activeColorOption && ['bodyColor', 'marblingColor', 'analRing', 'fur', 'fullFace', 'bovineSpot', 'vulvaAnalTeat', 'vulvaAnalHighlight', 'vulvaHighlight', 'internalClitoralHood', 'internalClitoral', 'internals'].includes(key)); // Active for color options
+        label.dataset.option = key;
+        label.classList.toggle('active', key === activeColorOption && ['bodyColor'].includes(key));
         div.appendChild(label);
 
         if (key === 'bodyColor') {
@@ -493,14 +504,13 @@ const confirmBtn = document.getElementById('color-modal-confirm');
             conflictIndicator.style.display = 'none';
             div.appendChild(conflictIndicator);
 
-            // Make label clickable
             label.addEventListener('click', () => handleSelectionBoxClick(key));
         } else {
             const select = document.createElement('select');
             values.forEach(value => {
                 const option = document.createElement('option');
                 option.value = value;
-                option.textContent = value.charAt(0).toUpperCase() + value.slice(1); // Capitalize
+                option.textContent = value.charAt(0).toUpperCase() + value.slice(1);
                 option.selected = value === currentConfig[key];
                 select.appendChild(option);
             });
@@ -508,22 +518,37 @@ const confirmBtn = document.getElementById('color-modal-confirm');
                 currentConfig[key] = e.target.value;
                 updateSvgDisplay();
                 updatePreview();
-                // Update label text on change
                 const newLabel = key === 'vaginalInsert' ? `VAGINAL INSERT: ${e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1)}`.toUpperCase() :
                                 key === 'analInsert' ? `ANAL INSERT: ${e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1)}`.toUpperCase() :
                                 key === 'cervixDepth' ? `CERVIX DEPTH: ${e.target.value} INCHES`.toUpperCase() :
                                 key.replace(/([A-Z])/g, ' $1').toUpperCase();
                 label.textContent = newLabel;
+                updatePriceDisplay(); // Update price when required options change
             });
             div.appendChild(select);
-            // Make label clickable for non-color options
             label.addEventListener('click', () => handleSelectionBoxClick(key));
         }
         requiredOptions.appendChild(div);
     });
 
+    // Optional options section - show individual prices
     optionalOptions.innerHTML = '<h3>Optional Options</h3>';
     const { disabledOptions } = updateOptionAvailability();
+
+    // Define pricing for display
+    const optionalPricing = {
+        'marblingColor': 30.00,
+        'fullFace': 30.00,
+        'bovineSpot': 30.00,
+        'fur': 25.00,
+        'vulvaAnalTeat': 25.00,
+        'vulvaAnalHighlight': 25.00,
+        'vulvaHighlight': 25.00,
+        'internalClitoralHood': 20.00,
+        'internalClitoral': 20.00,
+        'internals': 20.00,
+        'analRing': 15.00
+    };
 
     Object.entries(product.optional).forEach(([key, values]) => {
         const div = document.createElement('div');
@@ -537,11 +562,14 @@ const confirmBtn = document.getElementById('color-modal-confirm');
             displayLabel = 'INTERNAL CLITORAL';
         }
 
-        // Create label container
+        // Add pricing to label
+        const price = optionalPricing[key] || 0;
+        displayLabel += ` (+$${price.toFixed(0)})`;
+
         const label = document.createElement('label');
         label.textContent = displayLabel;
-        label.dataset.option = key; // For click handling
-        label.classList.toggle('active', key === activeColorOption && !disabledOptions.includes(key)); // Active for color options
+        label.dataset.option = key;
+        label.classList.toggle('active', key === activeColorOption && !disabledOptions.includes(key));
         div.appendChild(label);
 
         const selectionBox = document.createElement('div');
@@ -554,7 +582,7 @@ const confirmBtn = document.getElementById('color-modal-confirm');
 
         if (!disabledOptions.includes(key)) {
             selectionBox.addEventListener('click', () => handleSelectionBoxClick(key));
-            label.addEventListener('click', () => handleSelectionBoxClick(key)); // Make label clickable
+            label.addEventListener('click', () => handleSelectionBoxClick(key));
         }
         div.appendChild(selectionBox);
 
@@ -566,7 +594,7 @@ const confirmBtn = document.getElementById('color-modal-confirm');
 
         const note = document.createElement('div');
         note.className = 'note';
-        note.textContent = 'This color can’t be selected because it matches the body color.';
+        note.textContent = 'This color cannot be selected because it matches the body color.';
         note.style.display = 'none';
         div.appendChild(note);
 
@@ -575,6 +603,17 @@ const confirmBtn = document.getElementById('color-modal-confirm');
 
     updateConflictIndicators();
     renderColorGrid();
+    updatePriceDisplay(); // Update total price display
+}
+
+// Add a function to update the price display
+function updatePriceDisplay() {
+    const totalPrice = calculatePrice(currentConfig, selectedProduct);
+    const addToCartBtn = document.getElementById('add-to-cart-btn');
+    if (addToCartBtn) {
+        const baseText = isUpdateOrder ? 'Make Changes' : 'Add to Cart';
+        addToCartBtn.textContent = `${baseText} - $${totalPrice.toFixed(2)}`;
+    }
 }
 
     function handleSelectionBoxClick(key) {
@@ -667,6 +706,7 @@ const confirmBtn = document.getElementById('color-modal-confirm');
         viewInternalsBtn.classList.remove('active');
         updateSvgDisplay();
         updatePreview();
+        updatePriceDisplay();
     }
 }
 
@@ -764,134 +804,138 @@ const confirmBtn = document.getElementById('color-modal-confirm');
     }
 
     function handleColorSelection(key, color) {
-        const { disabledOptions } = updateOptionAvailability();
-        if (disabledOptions.includes(key)) {
-            return;
+    const { disabledOptions } = updateOptionAvailability();
+    if (disabledOptions.includes(key)) {
+        return;
+    }
+
+    const bodyColor = currentConfig.bodyColor;
+    const isMarbling = currentConfig.marblingColor !== 'none';
+
+    const previousValues = { ...currentConfig };
+    previousColors[key] = color;
+    currentConfig[key] = color;
+
+    const specialFeatures = [
+        'vulvaAnalTeat',
+        'fullFace',
+        'bovineSpot',
+        'vulvaAnalHighlight'
+    ];
+    const hasSpecialFeature = specialFeatures.some(feat => currentConfig[feat] !== 'none');
+
+    console.log(`Selecting ${key}: ${color}`);
+    console.log(`hasSpecialFeature: ${hasSpecialFeature}, isMarbling: ${isMarbling}`);
+    console.log(`Current Config Before:`, currentConfig);
+
+    if (key !== 'bodyColor' &&
+        color !== 'none' &&
+        color === bodyColor &&
+        !isMarbling &&
+        !((key === 'internals' || key === 'internalClitoral' || key === 'internalClitoralHood') && hasSpecialFeature)) {
+        console.log(`Resetting ${key} to 'none' because it matches bodyColor (${bodyColor}) and no marbling`);
+        currentConfig[key] = 'none';
+        const selectionBox = document.querySelector(`.selection-box[data-option="${key}"]`);
+        if (selectionBox) {
+            selectionBox.style.backgroundColor = colorValues['none'];
+            selectionBox.dataset.value = 'none';
+            selectionBox.dataset.previousColor = color;
         }
-
-        const bodyColor = currentConfig.bodyColor;
-        const isMarbling = currentConfig.marblingColor !== 'none';
-
-        const previousValues = { ...currentConfig };
-        previousColors[key] = color;
-        currentConfig[key] = color;
-
-        const specialFeatures = [
-            'vulvaAnalTeat',
-            'fullFace',
-            'bovineSpot',
-            'vulvaAnalHighlight'
-        ];
-        const hasSpecialFeature = specialFeatures.some(feat => currentConfig[feat] !== 'none');
-
-        console.log(`Selecting ${key}: ${color}`);
-        console.log(`hasSpecialFeature: ${hasSpecialFeature}, isMarbling: ${isMarbling}`);
-        console.log(`Current Config Before:`, currentConfig);
-
-        if (key !== 'bodyColor' &&
-            color !== 'none' &&
-            color === bodyColor &&
-            !isMarbling &&
-            !((key === 'internals' || key === 'internalClitoral' || key === 'internalClitoralHood') && hasSpecialFeature)) {
-            console.log(`Resetting ${key} to 'none' because it matches bodyColor (${bodyColor}) and no marbling`);
-            currentConfig[key] = 'none';
-            const selectionBox = document.querySelector(`.selection-box[data-option="${key}"]`);
-            if (selectionBox) {
-                selectionBox.style.backgroundColor = colorValues['none'];
-                selectionBox.dataset.value = 'none';
-                selectionBox.dataset.previousColor = color;
-            }
-            colorGridMessage.textContent = 'This color cannot be selected unless there is a marble.';
+        colorGridMessage.textContent = 'This color cannot be selected unless there is a marble.';
+        colorGridMessage.style.display = 'block';
+    } else {
+        const selectionBox = document.querySelector(`.selection-box[data-option="${key}"]`);
+        if (selectionBox) {
+            selectionBox.style.backgroundColor = colorValues[color];
+            selectionBox.dataset.value = color;
+            selectionBox.dataset.previousColor = color;
+        }
+        const { message } = updateOptionAvailability();
+        if (disabledOptions.includes(activeColorOption) && message) {
+            colorGridMessage.textContent = message;
             colorGridMessage.style.display = 'block';
         } else {
-            const selectionBox = document.querySelector(`.selection-box[data-option="${key}"]`);
-            if (selectionBox) {
-                selectionBox.style.backgroundColor = colorValues[color];
-                selectionBox.dataset.value = color;
-                selectionBox.dataset.previousColor = color;
-            }
-            const { message } = updateOptionAvailability();
-            if (disabledOptions.includes(activeColorOption) && message) {
-                colorGridMessage.textContent = message;
-                colorGridMessage.style.display = 'block';
-            } else {
-                colorGridMessage.style.display = 'none';
-            }
+            colorGridMessage.style.display = 'none';
         }
-
-        colorGrid.querySelectorAll('.swatch').forEach(s => {
-            s.classList.toggle('selected', s.dataset.value === color);
-        });
-
-        console.log("Checking for restoration...");
-        Object.keys(products[selectedProduct].optional).forEach(optKey => {
-            if (currentConfig[optKey] === 'none' &&
-                previousColors[optKey] !== 'none') {
-                const canKeepColor = (optKey === 'internals' || optKey === 'internalClitoral' || optKey === 'internalClitoralHood') && hasSpecialFeature;
-                if (canKeepColor ||
-                    previousColors[optKey] !== currentConfig.bodyColor ||
-                    currentConfig.marblingColor !== 'none') {
-                    console.log(`Restoring ${optKey} to ${previousColors[optKey]}`);
-                    currentConfig[optKey] = previousColors[optKey];
-                    const optSelectionBox = document.querySelector(`.selection-box[data-option="${optKey}"]`);
-                    if (optSelectionBox) {
-                        optSelectionBox.style.backgroundColor = colorValues[previousColors[optKey]];
-                        optSelectionBox.dataset.value = previousColors[optKey];
-                    }
-                }
-            }
-        });
-
-        const featuresAllowingMatch = ['marblingColor', ...specialFeatures];
-        if (featuresAllowingMatch.includes(key) && color === 'none') {
-            const internalKeys = ['internals', 'internalClitoral', 'internalClitoralHood'];
-            const anyFeatureActive = featuresAllowingMatch.some(feat => currentConfig[feat] !== 'none');
-            internalKeys.forEach(intKey => {
-                if (currentConfig[intKey] === bodyColor && !anyFeatureActive) {
-                    console.log(`Resetting ${intKey} to 'none' because feature ${key} was deselected and no conditions allow matching body color`);
-                    currentConfig[intKey] = 'none';
-                    const intSelectionBox = document.querySelector(`.selection-box[data-option="${intKey}"]`);
-                    if (intSelectionBox) {
-                        intSelectionBox.style.backgroundColor = colorValues['none'];
-                        intSelectionBox.dataset.value = 'none';
-                        intSelectionBox.dataset.previousColor = previousColors[intKey];
-                    }
-                }
-            });
-        }
-
-        console.log(`Current Config After:`, currentConfig);
-
-        if (key === 'bodyColor') {
-            const oldBodyColor = previousValues.bodyColor;
-            const wasMarbling = previousValues.marblingColor !== 'none';
-            if (color === currentConfig.marblingColor) {
-                currentConfig.marblingColor = 'none';
-                const marblingSelectionBox = document.querySelector(`.selection-box[data-option="marblingColor"]`);
-                if (marblingSelectionBox) {
-                    marblingSelectionBox.style.backgroundColor = colorValues['none'];
-                    marblingSelectionBox.dataset.value = 'none';
-                    marblingSelectionBox.dataset.previousColor = color;
-                }
-            }
-            updatePreview();
-            if (!wasMarbling || currentConfig.marblingColor === 'none') {
-                resetOptionalColorsToNone(products[selectedProduct], previousValues);
-            }
-            renderCustomization();
-        } else if (key === 'marblingColor' && color === 'none') {
-            resetOptionalColorsToNone(products[selectedProduct], previousValues);
-            renderCustomization();
-            updatePreview();
-        } else {
-            updatePreview();
-            if (['fullFace', 'bovineSpot', 'analRing'].includes(key)) {
-                renderCustomization();
-            }
-        }
-
-        updateConflictIndicators();
     }
+
+    colorGrid.querySelectorAll('.swatch').forEach(s => {
+        s.classList.toggle('selected', s.dataset.value === color);
+    });
+
+    console.log("Checking for restoration...");
+    Object.keys(products[selectedProduct].optional).forEach(optKey => {
+        if (currentConfig[optKey] === 'none' &&
+            previousColors[optKey] !== 'none') {
+            const canKeepColor = (optKey === 'internals' || optKey === 'internalClitoral' || optKey === 'internalClitoralHood') && hasSpecialFeature;
+            if (canKeepColor ||
+                previousColors[optKey] !== currentConfig.bodyColor ||
+                currentConfig.marblingColor !== 'none') {
+                console.log(`Restoring ${optKey} to ${previousColors[optKey]}`);
+                currentConfig[optKey] = previousColors[optKey];
+                const optSelectionBox = document.querySelector(`.selection-box[data-option="${optKey}"]`);
+                if (optSelectionBox) {
+                    optSelectionBox.style.backgroundColor = colorValues[previousColors[optKey]];
+                    optSelectionBox.dataset.value = previousColors[optKey];
+                }
+            }
+        }
+    });
+
+    const featuresAllowingMatch = ['marblingColor', ...specialFeatures];
+    if (featuresAllowingMatch.includes(key) && color === 'none') {
+        const internalKeys = ['internals', 'internalClitoral', 'internalClitoralHood'];
+        const anyFeatureActive = featuresAllowingMatch.some(feat => currentConfig[feat] !== 'none');
+        internalKeys.forEach(intKey => {
+            if (currentConfig[intKey] === bodyColor && !anyFeatureActive) {
+                console.log(`Resetting ${intKey} to 'none' because feature ${key} was deselected and no conditions allow matching body color`);
+                currentConfig[intKey] = 'none';
+                const intSelectionBox = document.querySelector(`.selection-box[data-option="${intKey}"]`);
+                if (intSelectionBox) {
+                    intSelectionBox.style.backgroundColor = colorValues['none'];
+                    intSelectionBox.dataset.value = 'none';
+                    intSelectionBox.dataset.previousColor = previousColors[intKey];
+                }
+            }
+        });
+    }
+
+    console.log(`Current Config After:`, currentConfig);
+
+    if (key === 'bodyColor') {
+        const oldBodyColor = previousValues.bodyColor;
+        const wasMarbling = previousValues.marblingColor !== 'none';
+        if (color === currentConfig.marblingColor) {
+            currentConfig.marblingColor = 'none';
+            const marblingSelectionBox = document.querySelector(`.selection-box[data-option="marblingColor"]`);
+            if (marblingSelectionBox) {
+                marblingSelectionBox.style.backgroundColor = colorValues['none'];
+                marblingSelectionBox.dataset.value = 'none';
+                marblingSelectionBox.dataset.previousColor = color;
+            }
+        }
+        updatePreview();
+        if (!wasMarbling || currentConfig.marblingColor === 'none') {
+            resetOptionalColorsToNone(products[selectedProduct], previousValues);
+        }
+        renderCustomization();
+        updatePriceDisplay(); // Add price update for body color changes
+    } else if (key === 'marblingColor' && color === 'none') {
+        resetOptionalColorsToNone(products[selectedProduct], previousValues);
+        renderCustomization();
+        updatePreview();
+        updatePriceDisplay(); // Add price update for marbling changes
+    } else {
+        updatePreview();
+        if (['fullFace', 'bovineSpot', 'analRing'].includes(key)) {
+            renderCustomization();
+        }
+        // Always update price display for any option change
+        updatePriceDisplay();
+    }
+
+    updateConflictIndicators();
+}
 
     function resetOptionalColorsToNone(product, previousValues) {
         const hasSpecialFeature = currentConfig.vulvaAnalTeat !== 'none' ||

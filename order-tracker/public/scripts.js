@@ -1870,13 +1870,63 @@ window.location.href = targetUrl;
         }
       
         const checkOutChangesBtn = document.getElementById('checkOutChanges');
-        if (checkOutChangesBtn) {
-          checkOutChangesBtn.addEventListener('click', () => {
-            applyChanges();
-            alert('Changes applied successfully! Proceeding to checkout...');
-            changesModal.remove();
-            modal.remove();
-          });
+if (checkOutChangesBtn) {
+  checkOutChangesBtn.addEventListener('click', () => {
+    applyChanges();
+    
+    // Add custom items to cart with proper pricing
+    Object.entries(pendingChanges).forEach(([index, updatedItem]) => {
+      // Calculate price for custom item
+      const basePrice = 89.00; // Base price for all custom items
+      let totalPrice = basePrice;
+      
+      // Add optional feature pricing
+      const optionalFeatures = [
+        'marblingColor', 'analRing', 'fur', 'fullFace', 'bovineSpot', 
+        'vulvaAnalTeat', 'vulvaAnalHighlight', 'vulvaHighlight', 
+        'internalClitoralHood', 'internalClitoral', 'internals'
+      ];
+      
+      optionalFeatures.forEach(feature => {
+        if (updatedItem.options[feature] && updatedItem.options[feature] !== 'none') {
+          // Pricing logic
+          if (['marblingColor', 'fullFace', 'bovineSpot'].includes(feature)) {
+            totalPrice += 30.00;
+          } else if (['fur', 'vulvaAnalTeat', 'vulvaAnalHighlight', 'vulvaHighlight'].includes(feature)) {
+            totalPrice += 25.00;
+          } else if (['internalClitoralHood', 'internalClitoral', 'internals'].includes(feature)) {
+            totalPrice += 20.00;
+          } else if (feature === 'analRing') {
+            totalPrice += 15.00;
+          }
+        }
+      });
+      
+      // Create cart item
+      const cartItem = {
+        id: `custom-update-${Date.now()}-${index}`,
+        category: 'custom',
+        product: updatedItem.product,
+        name: updatedItem.product.replace(/-/g, ' ').toUpperCase(),
+        price: totalPrice,
+        quantity: 1,
+        image: `../src/assets/images/external-view/${updatedItem.product}-body.svg`,
+        options: { ...updatedItem.options }
+      };
+      
+      // Add to cart using the cart.js function
+      if (typeof addToCart === 'function') {
+        addToCart(cartItem);
+      }
+    });
+    
+    alert('Changes applied successfully! Redirecting to cart...');
+    changesModal.remove();
+    modal.remove();
+    
+    // Redirect to view cart
+    window.location.href = '../../view-cart/public/index.html';
+  });
         }
       });
     }
