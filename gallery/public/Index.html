@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Meat - Custom Order</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">American Meat</div>
+        <nav>
+            <ul>
+                <li><a href="../../landing-page/public/index.html">Home</a></li>
+                <li><a href="../../custom-order-page/public/index.html">Custom Order</a></li>
+                <li><a href="../../ready-to-ship/public/index.html">Ready to Ship</a></li>
+                <li><a href="../../dildos/public/index.html">Dildos</a></li>
+                <li><a href="../../accessories/public/index.html">Accessories</a></li>
+                <li><a href="#" class="active">Gallery</a></li>
+                <li><a href="../../order-tracker/public/index.html">Order Tracker</a></li>
+                <li><a href="../../view-cart/public/index.html" id="cart-link"><i class="fas fa-shopping-cart"></i> View Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main></main>
+    <div class="gallery-container">
+        <h1>Product Gallery</h1>
+        <div class="filters" id="filters-container">
+            <div class="filter-group">
+                <label for="color-filter">Color</label>
+                <div class="custom-select" id="color-filter">
+                    <div class="select-display" aria-label="Select color options">Select</div>
+                    <div class="select-options" style="display: none;">
+                        <!-- Checkboxes will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="product-type-filter">Product Type</label>
+                <div class="custom-select" id="product-type-filter">
+                    <div class="select-display" aria-label="Select product type options">Select</div>
+                    <div class="select-options" style="display: none;">
+                        <!-- Checkboxes will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="option-type-filter">Option Type</label>
+                <div class="custom-select" id="option-type-filter">
+                    <div class="select-display" aria-label="Select option type options">Select</div>
+                    <div class="select-options" style="display: none;">
+                        <!-- Checkboxes will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="sort">Sort By</label>
+                <select id="sort" aria-label="Sort options">
+                    <option value="newest" selected>Newest to Oldest</option>
+                    <option value="oldest">Oldest to Newest</option>
+                </select>
+            </div>
+            <div class="reset-filters-link">
+                <a id="reset-filters" href="#" aria-label="Reset all filters">Reset Filters</a>
+            </div>
+        </div>
+        <div id="filter-warning"></div>
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Gallery items will be dynamically inserted here -->
+        </div>
+        <div id="global-error-container"></div>
+        <div id="image-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="modal-close">×</span>
+                <div class="modal-image-container">
+                    <img id="modal-image" src="" alt="Enlarged product image">
+                    <div class="image-dots" id="image-dots"></div>
+                </div>
+                <div class="modal-buttons">
+                    <button id="open-custom-builder">Open In Custom Builder</button>
+                    <button id="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div id="size-selection-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="size-selection-close">×</span>
+                <h2>Select Size Options</h2>
+                <form id="size-selection-form"></form>
+                <div class="modal-buttons">
+                    <button id="size-selection-confirm">Confirm</button>
+                    <button id="size-selection-cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    <script src="script.js"></script>
+</body>
+</html>
