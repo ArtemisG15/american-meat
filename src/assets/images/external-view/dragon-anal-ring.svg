@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="294.58286"
+   height="294.58286"
+   viewBox="0 0 294.58286 294.58286"
+   sodipodi:docname="dragon-anal-ring.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0.73580784"
+         id="stop1" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0.95851529"
+         id="stop2" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="radialGradient2"
+       cx="152.8508"
+       cy="105.05624"
+       fx="152.8508"
+       fy="105.05624"
+       r="28.452075"
+       gradientTransform="matrix(1,0,0,1.1181023,0,-12.40738)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.766624"
+     inkscape:cx="147.47215"
+     inkscape:cy="147.29143"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1"
+     showgrid="false" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <path
+       style="fill:url(#radialGradient2)"
+       d="m 153.2977,136.18986 c -1.60201,-1.16665 -2.14435,-1.3043 -3.94709,-1.00182 -5.60188,0.93995 -5.80052,0.95257 -7.32467,0.46535 -5.17338,-1.65375 -8.21445,-4.10186 -11.77862,-9.48196 -2.5832,-3.89933 -3.42152,-5.58258 -4.78111,-9.6 l -1.06749,-3.15429 0.0281,-7.54285 c 0.0273,-7.327193 0.049,-7.613445 0.75869,-10.011433 2.22003,-7.501162 6.60741,-13.498178 12.89075,-17.620094 6.79621,-4.458363 11.25663,-5.580091 18.85749,-4.742371 5.26731,0.58053 7.60418,1.836935 12.44497,6.690964 3.24601,3.254892 3.82514,4.118125 7.50891,11.192455 2.8022,5.381357 4.41524,11.241169 4.41524,16.039629 0,2.2967 -1.13187,7.96605 -1.88113,9.42227 -2.88069,5.59875 -6.6139,10.08434 -11.42173,13.7236 -1.99338,1.50888 -5.40744,3.25223 -7.54286,3.85169 -0.67886,0.19056 -1.48114,0.55844 -1.78286,0.8175 -0.91222,0.78327 -2.80907,1.63007 -3.65136,1.63007 -0.43628,0 -1.21262,-0.30542 -1.72522,-0.67871 z"
+       id="path1" />
+  </g>
+</svg>
