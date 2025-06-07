@@ -198,8 +198,8 @@ function getCartTotal() {
     return total;
 }
 
-// Product options map for validation (keeping your existing structure)
-const productOptionsMap = {
+// Product options map for validation - use a different name to avoid conflicts
+const cartProductOptionsMap = {
     'two-hole-pony': [
         'bodyColor',
         'vaginalInsert',
